@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexStore | Premium Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">NexStore</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products..." onkeyup="filterProducts()">
+            <select id="category-filter" onchange="filterProducts()">
+                <option value="all">All Categories</option>
+                <option value="Audio">Audio</option>
+                <option value="Wearables">Wearables</option>
+                <option value="Computing">Computing</option>
+            </select>
+        </div>
+        <div class="cart-btn" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main id="product-grid">
+        </main>
+
+    <div id="cart-sidebar" class="cart-hidden">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button onclick="toggleCart()" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items">
+            </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span>$<span id="total-price">0.00</span></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Place Order</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
